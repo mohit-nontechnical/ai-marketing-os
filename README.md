@@ -37,6 +37,40 @@ Honest numbers, including the unflattering ones:
 - Notification load was cut from roughly 60 pings a morning to 3 to 5 meaningful pushes a day through batching, silent tiers, and quiet hours.
 - Infrastructure cost: a couple of small droplets at $6 to $12 a month each, plus pay-per-use AI APIs. OSS and free tiers first, by policy.
 
+## The system, in screenshots
+
+Anything private (revenue goals, one stale-queue line) is blurred on purpose; everything else is the real console.
+
+### The daily loop
+
+Every morning the system proposes idea cards and stops there: Approve & schedule, Later, or Dismiss. The ops health strip below shows dispatch status per channel, approval queue depth, and 30-day attribution in one glance.
+
+![Morning Desk with idea cards and the ops health strip](docs/img/morning-triage.png)
+
+Approved content arrives on my phone as a Telegram card before it can publish. Nothing goes out without a tap. After approval, the loop runs cloud-side and reports back with the live link.
+
+| Approval card | After the tap |
+|---|---|
+| ![Telegram approval card with a carousel preview and post copy](docs/img/telegram-approval-card.jpg) | ![The same thread showing publishing now, then the live Facebook link](docs/img/telegram-publish-confirm.jpg) |
+
+### Generation, with the cost shown first
+
+Creative Factory queues a batch of 12 ad creatives and shows the estimated image spend (about $0.36) before I commit to the run. Super Video picks between three pipelines: recorded footage plus AI b-roll, a narrated slideshow, or an avatar reading the script.
+
+![Creative Factory tools page with a 12-creative batch and its estimated spend](docs/img/creative-factory.png)
+
+![Super Video pipeline picker](docs/img/super-video.png)
+
+### Operating it
+
+The project copilot is scoped to one brand: quick actions, a chat that only knows this project's voice and workflows, and a live spend meter ($2.28 of a $30 monthly budget in this shot).
+
+![Project copilot with quick actions and a spend meter](docs/img/mohitos-copilot.png)
+
+On load, a setup doctor checks its own 31-item configuration and prints the exact fix command for anything missing, here an unapplied database migration.
+
+![Setup doctor showing 26 of 31 checks ready and the exact fix command](docs/img/setup-doctor.png)
+
 ## Docs
 
 | Doc | Covers |
